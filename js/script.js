@@ -51,13 +51,13 @@ if (invalid) {
     if (etaPasseggero < 18 || etaPasseggero >= 65) {
         if (etaPasseggero < 18) {
             messagePercentage = "20%";
-            finalDiscount = tripCost * underagePrice;
+            finalDiscount = tripCost * underageDiscount;
         } else {
             messagePercentage = "40%";
-            finalDiscount = tripCost * elderPrice;
+            finalDiscount = tripCost * elderDiscount;
         }
 
-        message += `; è stato applicato uno sconto del <strong>${messagePercentage}</strong>, pari a <strong>€${finalDiscount.toFixed(2)}</strong>`;
+        message += `; è stato applicato uno sconto del <strong>${messagePercentage}</strong>, pari a <strong>€ ${finalDiscount.toFixed(2)}</strong>`;
     }
 
     // Print in page
