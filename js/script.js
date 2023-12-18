@@ -25,17 +25,23 @@ let tripCost = kmViaggio * kmCost;
 // invalid condition
 const invalid = isNaN(kmViaggio) || isNaN(etaPasseggero) || kmViaggio <= 0 || etaPasseggero < 0;
 
+// dichiarazione messaggio
+let message;
+
 // verifica inserimento valori 
 if (invalid) {
     alert("Errore: per procedere al calcolo della tariffa, inserire valori numerici validi.")
 } else {
-    // Applicazione eventuale sconti
+    // applicazione eventuale sconti
     if (etaPasseggero < 18 || etaPasseggero >= 65) {
         etaPasseggero < 18 ? tripCost *= underagePrice : tripCost *= elderPrice;
     }
     
+    // predisposizione messaggio
+    message = `Gentile cliente, la tariffa del suo biglietto ammonta a <strong>€ ${tripCost.toFixed(2)}</strong>`;
+
     // Print in page
-    document.getElementById("trip-fee").innerHTML = `Gentile cliente, la tariffa del suo biglietto ammonta a <strong>€ ${tripCost.toFixed(2)}</strong> (al netto di eventuali sconti).`
+    document.getElementById("trip-fee").innerHTML = message;
 }
 
 
