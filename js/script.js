@@ -27,4 +27,5 @@ if (etaPasseggero < 18 || etaPasseggero >= 65) {
     etaPasseggero < 18 ? tripCost *= underagePrice : tripCost *= elderPrice;
 }
 
-console.log(tripCost);
+// Print in page
+document.getElementById("trip-fee").innerHTML = `Gentile cliente, la tariffa del suo biglietto ammonta a <strong>€ ${tripCost}</strong> (al netto di eventuali sconti).`
