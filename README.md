@@ -9,3 +9,11 @@ Sulla base di queste informazioni dovrà calcolare il **prezzo totale del viaggi
 - va applicato uno sconto del 40% per gli over 65.
 
 L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
+
+### Step ragionamento
+
+1. chiedere n chilometri da percorrere e creare variabile
+2. chiedere età passeggero
+3. calcolare tariffa
+4. calcolare lo sconto da applicare alla tariffa
+5. mostrare tariffa in forma umana
