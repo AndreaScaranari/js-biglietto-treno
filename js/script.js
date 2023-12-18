@@ -8,3 +8,9 @@ console.log(kmViaggio);
 const etaPasseggero = parseInt(prompt("Quanti anni hai?", "30"));
 console.log(etaPasseggero);
 
+// calcolare tariffa
+// 1. costo al km
+const kmCost = 0.21;
+// 2. costo per viaggio
+let tripCost = kmViaggio * kmCost;
+console.log(tripCost);
