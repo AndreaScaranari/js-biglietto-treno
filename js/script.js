@@ -29,7 +29,7 @@ const invalid = isNaN(kmViaggio) || isNaN(etaPasseggero) || kmViaggio <= 0 || et
 let finalPrice = tripCost;
 
 // dichiarazione messaggio
-let message = `Gentile cliente, la tariffa del suo biglietto ammonta a <strong>€ ${finalPrice.toFixed(2)}</strong>`;
+let message;
 
 // supporto messaggio finale
 let messagePercentage;
@@ -51,8 +51,13 @@ if (invalid) {
             messagePercentage = "40%";
             finalDiscount = tripCost * elderDiscount;
         }
-
-        message += `; è stato applicato uno sconto del <strong>${messagePercentage}</strong>, pari a <strong>€ ${finalDiscount.toFixed(2)}</strong>`;
+    }
+    
+    // messaggio finale
+    message = `Gentile cliente, la tariffa del suo biglietto ammonta a <strong>€ ${finalPrice.toFixed(2)}</strong>`;
+    
+    if (etaPasseggero < 18 || etaPasseggero >= 65) {
+    message += `; è stato applicato uno sconto del <strong>${messagePercentage}</strong>, pari a <strong>€ ${finalDiscount.toFixed(2)}</strong>`;
     }
 
     // Print in page
